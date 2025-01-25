@@ -19,11 +19,9 @@ The methodology relies on MCMC simulations to:
 Use of real data to demonstrate the model's ability to identify clusters corresponding to similar economic dynamics.
 
 **Coding instruction**
-rom the command line, follow these steps to set up this project:
-
 1. Clone this repository:
 ```bash
-   git clone https://github.com/AminaManseur29/Bayesian_statistics_project.git
+git clone https://github.com/AminaManseur29/Bayesian_statistics_project.git
 ```
 2. Navigate to the project folder:
 ```bash
