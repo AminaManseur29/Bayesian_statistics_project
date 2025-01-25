@@ -1,26 +1,40 @@
-# Clustering bayésien des séries semporelles : réplication et application
+# Bayesian clustering of time series: replication and application
 
 **Description**
 
+This project explores Bayesian modeling techniques for classification and clustering, based on the paper “Model-Based Clustering of Multiple Time Series” by S. Fröhwirth-Schnatter and S. Kaufmann (2008). 
+The aim is to use finite mixture models to group similar time series into clusters, while simultaneously estimating the parameters specific to each cluster. This project applies these techniques to real annual GDP data from several countries around the world.
 
+**Methodology**
+- Model-based clustering:
+Time series are clustered according to their common dynamics, using econometric models specific to each cluster. Unlike traditional approaches, cluster membership is estimated directly during the inference procedure.
 
-
-Ce projet explore les techniques de modélisation bayésienne pour la classification et le clustering, en s'appuyant sur l'article intitulé : "Model-Based Clustering of Multiple Time Series", de S. Fröhwirth-Schnatter et S. Kaufmann (2008). 
-L'objectif est d'utiliser des modèles de mélange fini pour regrouper des séries temporelles similaires en clusters, tout en estimant simultanément les paramètres spécifiques à chaque cluster. Ce projet applique ces techniques aux données réelles du PIB annuel de plusieurs pays à travers le monde.
-
-**Méthodologie**
-- Clustering basé sur des modèles :
-Les séries temporelles sont regroupées en fonction de leurs dynamiques communes, en utilisant des modèles économétriques spécifiques à chaque cluster. Contrairement aux approches traditionnelles, l'appartenance aux clusters est estimée directement lors de la procédure d'inférence.
-
-- Approche bayésienne :
-La méthodologie repose sur les simulations MCMC pour :
-    - Estimer les groupes et leurs paramètres simultanément.
-    - Optimiser le nombre de clusters via des vraisemblances marginales.
-    - Deux types de prior sont explorés : une probabilité proportionnelle à la taille relative des clusters (prior ignorance) et un prior logit basé sur des informations spécifiques aux séries.
+- Bayesian approach :
+The methodology relies on MCMC simulations to:
+    - Estimate clusters and their parameters simultaneously.
+    - Optimize the number of clusters via marginal likelihoods.
+    - Two types of prior are explored: a probability proportional to the relative size of the clusters (prior ignorance) and a logit prior based on series-specific information.
 
 **Application**
-Utilisation des données réelles pour démontrer la capacité du modèle à identifier des clusters correspondant à des dynamiques économiques similaires.
+Use of real data to demonstrate the model's ability to identify clusters corresponding to similar economic dynamics.
 
-**Références**
+**Coding instruction**
+rom the command line, follow these steps to set up this project:
+
+1. Clone this repository:
+```bash
+   git clone https://github.com/AminaManseur29/Bayesian_statistics_project.git
+```
+2. Navigate to the project folder:
+```bash
+cd Bayesian_statistics_project
+```
+3. Install the listed dependencies:
+```bash
+pip install -r requirements.txt
+```
+4. Run the jupyter notebook `Application_1.ipynb`
+
+**References**
 
 Sylvia Fröhwirth-Schnatter & Sylvia Kaufmann (2008) Model-Based Clustering of Multiple Time Series, Journal of Business & Economic Statistics, 26:1, 78-89, DOI: 10.1198/073500107000000106
